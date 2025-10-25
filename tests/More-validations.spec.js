@@ -31,7 +31,7 @@ test('iframes', async ({ page }) => {
     console.log('count:' + count.split(' ')[1])
 })
 
-test.only('screenshots', async ({ page }) => {
+test('screenshots', async ({ page }) => {
     await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
     await expect(page.locator('#displayed-text')).toBeVisible()
     await page.locator('#displayed-text').screenshot({ path: 'partial-screenshot.png' })
